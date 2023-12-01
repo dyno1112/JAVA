@@ -1,5 +1,6 @@
 import java.util.Scanner;
-import java.util.io.*;
+import java.io.*;
+import java.lang.*;
 public class MATRIX
 {
       public static void main(String ab[])
@@ -35,7 +36,7 @@ public class MATRIX
                            display(product);
                            break;
                     case 3:System.out.println("Exiting.....");
-                           exit(0);
+                           System.exit(0);
                            break;      
                     default:System.out.println("Invalid Choice!");                                                         
              }
