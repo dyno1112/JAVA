@@ -1,0 +1,38 @@
+public class ITEM {
+    private int no;
+    private String name;
+    private double price;
+    private static int objcount = 0;
+
+    public ITEM(int id, String name, double price) {
+        this.no = id;
+        this.name = name;
+        this.price = price;
+        objcount++;
+    }
+
+    public static int getobjcount() {
+        return objcount;
+    }
+
+    public void display() {
+        System.out.println("Item no: " + no);
+        System.out.println("Item Name: " + name);
+        System.out.println("Item price:" + price);
+
+    }
+
+    public static void main(String[] args) {
+        ITEM item1 = new ITEM(1, "abc", 50000);
+        item1.display();
+        System.out.println("Object count  is: " + ITEM.getobjcount());
+        System.out.println();
+        ITEM item2 = new ITEM(2, "xyz", 75000);
+        item2.display();
+        System.out.println("Object count  is: " + ITEM.getobjcount());
+        System.out.println();
+        ITEM item3 = new ITEM(4, "xvz", 7000);
+        item3.display();
+        System.out.println("Object count  is: " + ITEM.getobjcount());
+    }
+}
